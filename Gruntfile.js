@@ -42,26 +42,27 @@ module.exports = function(grunt) {
             src: ['src/templates/pages/en/*.hbs'],
             dest: './web'
         },
-        lt: {
-            options: {
-                data: ['src/templates/data/lt/*.yml']
-            },
-            src: ['src/templates/pages/lt/*.hbs'],
-            dest: './web/lt/'
-        },
+        // Reikalinga jei bus LT kalba //
+        // lt: {
+        //     options: {
+        //         data: ['src/templates/data/lt/*.yml']
+        //     },
+        //     src: ['src/templates/pages/lt/*.hbs'],
+        //     dest: './web/lt/'
+        // },
     },
     svg_sprite: {
     generate: {
         cwd: 'web/assets/vendor/material-design-icons',
         src: [
-            '../../../../web/assets/images/ic_menu_24px.svg',
-            '../../../../web/assets/images/ic_crop_24px.svg',
-            '../../../../web/assets/images/ic_home_24px.svg',
-            '../../../../web/assets/images/ic_notifications_24px.svg',
-            '../../../../web/assets/images/ic_more_24px.svg',
-            '../../../../web/assets/images/ic_lockScreenSvg_24px.svg',
-            '../../../../web/assets/images/ic_profileSvg_24px.svg',
-            '../../../../web/assets/images/ic_settingsSvg_24px.svg',
+            // '../../../../web/assets/images/ic_menu_24px.svg',
+            // '../../../../web/assets/images/ic_crop_24px.svg',
+            // '../../../../web/assets/images/ic_home_24px.svg',
+            // '../../../../web/assets/images/ic_notifications_24px.svg',
+            // '../../../../web/assets/images/ic_more_24px.svg',
+            // '../../../../web/assets/images/ic_lockScreenSvg_24px.svg',
+            // '../../../../web/assets/images/ic_profileSvg_24px.svg',
+            // '../../../../web/assets/images/ic_settingsSvg_24px.svg',
 
         ],
         dest: 'src/sprites',
@@ -106,14 +107,14 @@ module.exports = function(grunt) {
   // Default task(s).
   grunt.registerTask('assemble:site', [
       'assemble:en',
-      'assemble:lt'
+      // 'assemble:lt' Reikalinga jei bus LT kalba
   ]);
 
   // Default task(s).
   grunt.registerTask('default', [
       'compass:dist',
       'assemble:en',
-      'assemble:lt'
+      // 'assemble:lt' Reikalinga jei bus LT kalba
   ]);
 
 };
