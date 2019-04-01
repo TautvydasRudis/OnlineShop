@@ -1,0 +1,20 @@
+.background{
+
+  .bg-image{
+    height: 870px;
+    background-image: url(../images/teaBackground2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    button{
+      background-color: transparent;
+      // border: solid rgba(255, 255, 255, 1) 2px;
+      
+    }
+    &__description{
+      h2{
+        padding-bottom: 16px;
+      }
+    }
+  }
+}
