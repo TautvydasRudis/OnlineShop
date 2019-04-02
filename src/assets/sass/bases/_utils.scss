@@ -16,3 +16,13 @@
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
 }
+.topbar-line {
+    border-top: 1px solid rgba(255, 255, 255, 1);
+    border-bottom: 2px solid rgba(255, 255, 255, 1);
+    padding: 5px 0 0 0;
+}
+.footer-line {
+    border-top: 1px solid rgba(36, 42, 53, 1);
+    border-bottom: 2px solid rgba(36, 42, 53, 1);
+    padding: 5px 0 0 0;
+}

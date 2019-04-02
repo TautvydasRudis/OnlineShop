@@ -9624,8 +9624,8 @@ a.text-dark:hover, a.text-dark:focus {
   }
 }
 .svg-icon {
-  height: 24px;
-  width: 24px;
+  height: 20px;
+  width: 20px;
   fill: white;
 }
 
@@ -9648,6 +9648,18 @@ a.text-dark:hover, a.text-dark:focus {
   transform: translate(-50%, -50%);
 }
 
+.topbar-line {
+  border-top: 1px solid white;
+  border-bottom: 2px solid white;
+  padding: 5px 0 0 0;
+}
+
+.footer-line {
+  border-top: 1px solid #242a35;
+  border-bottom: 2px solid #242a35;
+  padding: 5px 0 0 0;
+}
+
 p {
   color: white;
 }
@@ -9656,7 +9668,7 @@ h2 {
   color: white;
 }
 
-.topbar {
+.topbar .topbar-nav-bar {
   position: fixed;
   top: 0;
   left: 0;
@@ -9667,7 +9679,7 @@ h2 {
   display: flex;
   border-bottom: solid 2px #c3c8ce;
 }
-.topbar .nav-bar {
+.topbar .topbar-nav-bar .nav-bar {
   height: 80px;
   width: 100%;
   width: calc(100% - 0px);
@@ -9677,13 +9689,13 @@ h2 {
   position: relative;
   padding-top: 24px;
 }
-.topbar .nav-bar__lists {
+.topbar .topbar-nav-bar .nav-bar__lists {
   list-style: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
-.topbar .nav-bar__lists li {
+.topbar .topbar-nav-bar .nav-bar__lists li {
   width: 59px;
   height: 50px;
   position: relative;
@@ -9691,20 +9703,20 @@ h2 {
   box-sizing: border-box;
   overflow: visible;
 }
-.topbar .nav-bar--left {
+.topbar .topbar-nav-bar .nav-bar--left {
   -webkit-box-flex: 2;
   -ms-flex: 2;
   flex: 2;
 }
-.topbar .nav-bar--left__lists a {
+.topbar .topbar-nav-bar .nav-bar--left__lists a {
   text-decoration: none;
 }
-.topbar .nav-bar--left__lists p:hover {
+.topbar .topbar-nav-bar .nav-bar--left__lists p:hover {
   color: gold;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
-.topbar .nav-bar--center {
+.topbar .topbar-nav-bar .nav-bar--center {
   padding-left: 56px;
   border-left: solid 2px #c3c8ce;
   border-right: solid 2px #c3c8ce;
@@ -9712,13 +9724,13 @@ h2 {
   -ms-flex: 1;
   flex: 1;
 }
-.topbar .nav-bar--right {
+.topbar .topbar-nav-bar .nav-bar--right {
   -webkit-box-flex: 2;
   -ms-flex: 2;
   flex: 2;
   padding-right: 20px;
 }
-.topbar .nav-bar--right__lists {
+.topbar .topbar-nav-bar .nav-bar--right__lists {
   -webkit-box-pack: end;
   -ms-flex-pack: end;
   justify-content: flex-end;
@@ -9736,4 +9748,13 @@ h2 {
 }
 .background .bg-image__description h2 {
   padding-bottom: 16px;
+}
+
+.page-footer li {
+  list-style: none;
+}
+.page-footer .subscribeNow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
