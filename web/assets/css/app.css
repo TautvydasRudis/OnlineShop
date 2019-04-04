@@ -9737,107 +9737,67 @@ h2 {
   justify-content: flex-end;
 }
 
-@media (min-width: 768px) {
-  /* show 3 items */
-  .carousel-inner .active,
-  .carousel-inner .active + .carousel-item,
-  .carousel-inner .active + .carousel-item + .carousel-item,
-  .carousel-inner .active + .carousel-item + .carousel-item + .carousel-item {
-    display: block;
-  }
-
-  .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left),
-  .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item,
-  .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item,
-  .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item + .carousel-item {
-    -webkit-transition: none;
-    transition: none;
-  }
-
-  .carousel-inner .carousel-item-next,
-  .carousel-inner .carousel-item-prev {
-    position: relative;
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-  }
-
-  .carousel-inner .active.carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
-    position: absolute;
-    top: 0;
-    right: -25%;
-    z-index: -1;
-    display: block;
-    visibility: visible;
-  }
-
-  /* left or forward direction */
-  .active.carousel-item-left + .carousel-item-next.carousel-item-left,
-  .carousel-item-next.carousel-item-left + .carousel-item,
-  .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item,
-  .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item,
-  .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
-    position: relative;
-    -webkit-transform: translate3d(-100%, 0, 0);
-    transform: translate3d(-100%, 0, 0);
-    visibility: visible;
-  }
-
-  /* farthest right hidden item must be abso position for animations */
-  .carousel-inner .carousel-item-prev.carousel-item-right {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    display: block;
-    visibility: visible;
-  }
-
-  /* right or prev direction */
-  .active.carousel-item-right + .carousel-item-prev.carousel-item-right,
-  .carousel-item-prev.carousel-item-right + .carousel-item,
-  .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item,
-  .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item,
-  .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
-    position: relative;
-    -webkit-transform: translate3d(50%, 0, 0);
-    transform: translate3d(50%, 0, 0);
-    visibility: visible;
-    display: block;
-    visibility: visible;
-  }
-}
-/* Bootstrap Lightbox using Modal */
-#profile-grid {
-  overflow: auto;
-  white-space: normal;
-}
-
-#profile-grid .profile {
-  padding-bottom: 40px;
-}
-
-#profile-grid .panel {
-  padding: 0;
-}
-
-#profile-grid .panel-body {
-  padding: 15px;
-}
-
-#profile-grid .profile-name {
-  font-weight: bold;
-}
-
-#profile-grid .thumbnail {
-  margin-bottom: 6px;
-}
-
-#profile-grid .panel-thumbnail {
+.MultiCarousel {
+  float: left;
   overflow: hidden;
+  padding: 15px;
+  width: 100%;
+  position: relative;
 }
 
-#profile-grid .img-rounded {
-  border-radius: 4px 4px 0 0;
+.MultiCarousel .MultiCarousel-inner {
+  -webkit-transition: 1s ease all;
+  transition: 1s ease all;
+  float: left;
+}
+.MultiCarousel .MultiCarousel-inner .item .pad15 a {
+  text-decoration: none;
+}
+.MultiCarousel .MultiCarousel-inner .item .pad15 img {
+  width: 50%;
+}
+.MultiCarousel .MultiCarousel-inner .item .pad15 p {
+  color: black;
+}
+
+.MultiCarousel .MultiCarousel-inner .item {
+  float: left;
+}
+
+.MultiCarousel .MultiCarousel-inner .item > div {
+  text-align: center;
+  padding: 10px;
+  margin: 10px;
+  color: #666;
+}
+
+.MultiCarousel .leftLst, .MultiCarousel .rightLst {
+  position: absolute;
+  border-radius: 50%;
+  top: calc(50% - 20px);
+}
+
+.MultiCarousel .leftLst {
+  left: 0;
+}
+
+.MultiCarousel .rightLst {
+  right: 0;
+}
+
+.MultiCarousel .leftLst.over, .MultiCarousel .rightLst.over {
+  pointer-events: none;
+  background: black;
+}
+
+.new-arivals__btn {
+  background-color: Transparent;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
+  padding: 0;
 }
 
 .background .bg-image {
@@ -9852,6 +9812,11 @@ h2 {
 }
 .background .bg-image__description h2 {
   padding-bottom: 16px;
+}
+.background .new-arrivals .the-best-carousel .container .row .new-arivals__button button {
+  background-color: #242a35;
+  border: solid #7d7c7c 0px;
+  cursor: pointer !important;
 }
 
 .page-footer li {

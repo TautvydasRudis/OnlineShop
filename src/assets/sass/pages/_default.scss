@@ -9,11 +9,26 @@
     button{
       background-color: transparent;
       // border: solid rgba(255, 255, 255, 1) 2px;
-      
+
     }
     &__description{
       h2{
         padding-bottom: 16px;
+      }
+    }
+  }
+  .new-arrivals{
+    .the-best-carousel{
+      .container{
+        .row{
+          .new-arivals__button{
+            button{
+              background-color: rgba(36, 42, 53, 1);
+              border: solid rgba(125, 124, 124, 1) 0px;
+              cursor: pointer !important;              
+            }
+          }
+        }
       }
     }
   }
